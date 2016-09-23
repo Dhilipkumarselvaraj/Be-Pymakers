@@ -1,0 +1,356 @@
+"""1. Write a program to find the greatest number among the list of numbers."""
+n=input("enter the number of donuts")
+if (n>10):
+   print("'No of donuts: Many'")
+else:
+   print"NO of donuts:%s" %(n)
+
+****************************************************************************************************
+"""2. Write a program to reverse a string/number where user should be able to input the values"""
+def rev():#def rev fun
+    print "ENTERED NUMBERS ARE",n[::-1]#reversing the string using index value from -1
+
+n=raw_input("enter the string/number to be reversed")#getting value from user
+rev()#calling rev fun
+
+***************************************************************************************************
+3)"""3. Ask the user to enter a temperature in Celsius. The program should print a message based
+on the temperature:
+ (a) If the temperature is less  than -273.15, print that the temperature is invalid because it is"""
+n=raw_input('enter a temperature in Celsius')
+if n>-273.15:
+    print 'the temperature is invalid because it is below absolute zero.'
+elif n==-273.15:
+    print 'the temperature is absolute 0'
+elif -273.15<n<0:
+    print 'the temperature is below freezing'
+elif  n==0:
+    print 'the temperature is at the freezing point'
+elif  0<n<100:
+    print 'the temperature is in the normal range'
+elif  n==100:
+    print 'the temperature is at the boiling point'
+elif n>100:
+    print 'the temperature is above the boiling point'
+***********************************************************************************************
+"""4. A year is a leap year if it is divisible by 4, except that years divisible by 100 are not leap years
+unless they are also divisible by 400. Write a program that asks the user for a year and prints
+out whether it is a leap year or not."""
+n=input("enter the year")
+if n%4==0:
+  print 'is leap year'
+elif n%100==0:
+  print 'is leap  year'
+elif n%400==0:
+  print 'is leap year'
+else:
+  print 'not a leap year'
+
+ ********************************************************************************************
+ """5. Write a program that asks the user to enter a list of integers. Do the following:
+(a) Print the total number of items in the list.
+(b) Print the last item in the list.
+(c) Print the list in reverse order.
+(d) Print Yes if the list contains a 5 and No otherwise.
+(e) Print the number of fives in the list.
+(f) Remove the first and last items from the list, sort the remaining items, and print the
+result."""
+a=input("enter the elements in the list");
+print "total number elements in the list %s" % (a)
+#last item in the list
+b=a[-1]
+print "total number elements in the list %s" % (b)
+#reverse order
+c=a[::-1]
+print "total number elements in the list %s" % (c)
+#contain a 5 or not
+if a.count(5)==0:
+   print "NO"
+else:
+   print "YES"
+#repeated number of 5
+d=a.count(5)
+print "total number elements in the list %s" % (d)
+#removing first and last element
+e=a[1:-1]
+print e
+print e.sort()
+**********************************************************************************************
+"""6. Start with the list [8,9,10]. Do the following:
+(a) Set the second entry (index 1) to 17
+(b) Add 4, 5, and 6 to the end of the list
+(c) Remove the first entry from the list
+(d) Sort the list
+(e) Double the list
+(f) Insert 25 at index 3
+The final list should equal [4,5,6,25,10,17,4,5,6,10,17]"""
+
+lis=[8,9,10]#values in list
+print lis
+lis[1] = 17 #replacing index 1 to 17
+print lis
+#addin 4,5,6 in list
+lis.append(4) #adding4
+lis.append(5) #adding5
+lis.append(6) #adding 6
+lis.sort() #sorting the list
+print lis
+b=lis*2  #doubling the list
+print b
+b[3]=25 #replace index[3]=25
+print b
+
+**********************************************************************************************
+"""7.Write a program that uses a dictionary that contains ten user names and passwords. The
+program should ask the user to enter their username and password. If the username is not in
+the dictionary, the program should indicate that the person is not a valid user of the system. If
+the username is in the dictionary, but the user does not enter the right password, the program
+should say that the password is invalid. If the password is correct, then the program should
+tell the user that they are now logged in to the system."""
+n=input("enter the number of students")#get num of users
+user_lists=[]
+for i in range(n):
+      user=raw_input("enter the username") #username
+      passw=raw_input("enter the password")#gtng password
+      logs={'username':user,'password':passw} #storing values in keys 
+      user_lists.append(logs) #entering value to empty list
+print user_lists #printing list
+
+
+#for checking
+u=raw_input("enter the username")#askng name for check
+p=raw_input("enter the password")#asking passkey for check
+count = len(user_lists) #couunt len of strng
+c=count #ass count value to c
+print "total number of dictionaries = %s" %(c)
+i=0
+usernames_list=[ ]      # new empty lists initilization
+temp=[ ]
+userpassword_list=[ ]
+while i<count:
+    temp=user_lists[i].values()
+    usernames_list.append(temp[0])
+    userpassword_list.append(temp[1])
+    i = i+1
+print "usernames:", usernames_list
+print "passwords:",userpassword_list
+if u in usernames_list:
+  if p in userpassword_list:
+    print "\nLogged in succesfullyyy.."
+  else:
+    print "wrong password"
+else:
+    print"sorry...wrong password Try again....."
+    
+*********************************************************************************************
+"""8. Write a program rotates the elements of a list so that the element at the first index moves
+to the second index, the element in the second index moves to the third index, etc., and the
+element in the last index moves to the first index."""
+def shift(l, n):
+    return l[n:] + l[:n]
+l=[1,2,3,4]
+print shift (l,3)  
+********************************************************************************************
+"""9. Given an int count of a number of donuts, return a string of the form 'Number of 
+donuts: <count>', where <count> is the number passed in. However, if the count is 10 or
+more, then use the word 'many'  instead of the actual count. So donuts(5) returns
+'Number of donuts: 5' and donuts(23) returns 'Number of donuts: many' """
+
+n=input("enter the number of donuts")
+if (n>10):
+   print("'No of donuts: Many'")
+else:
+   print"NO of donuts:%s" %(n)
+
+********************************************************************************************
+
+"""10. Given a string s, return a string made of the first 2 and the last 2 chars of the 
+original string,  so 'spring' yields 'spng'. However, if the string length is less than 2, return 
+instead the empty string."""
+n=raw_input("enter the string")
+print "the given string is='%s'" %n
+count=len(n)
+print count
+print n[0:2]+n[-2:]
+******************************************************************************************
+"""11.Given a list of strings, return the count of the number of strings where the string
+length is 2 or more and the first and last chars of the string are the same."""
+day=['monday','tuesday','appa','wednesday','e','madam']
+count=len(day)
+for i in day:
+  l=len(i)
+  if l>=2:
+     k=[]
+     k.append(i)
+     if k[0][0]==k[0][-1]:
+        print k
+********************************************************************************************
+'''12.If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 
+6 and 9. The sum of these multiples is 23. write a program to find the sum of all the 
+multiples of 3 or 5 below 1000.'''
+s=0
+for i in range(0,1000):
+   if ((i%3) and (i%5))==0:  
+        s=s+i
+        print s
+
+********************************************************************************************
+'''13.Each new term in the Fibonacci sequence is generated by adding the previous two 
+terms. By starting with 1 and 2, the first 10 terms will be: 
+1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+By considering the terms in the Fibonacci sequence whose values do not exceed four 
+million, write a program to find the sum of the even-valued terms.'''
+
+
+
+a=1 #ass a=1 bcoz we want 0
+b=1 #ass b=1 bcoz we want 1,1
+for i in range(0,10):
+  a,b = b,a+b
+  print a
+
+********************************************************************************************
+'''14. Write a code to remove duplicates in an array of numbers.'''
+
+s=[1,2,2,3,3,4,6,7,7]
+k=set(s)
+print k
+*******************************************************************************************
+'''15. Write a code to generate a random no in a range from min to max?'''
+
+import random 
+for i in range(0,100):
+  print "the range is %s" %(i)
+  k=random.randint(0,100)
+  print k
+********************************************************************************************
+'''16.The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17. Find the sum of all
+the primes below two million.'''
+
+num=input("enter the positive integer")
+if num>1:
+   for i in range(2,num): 
+       if (num/i)==0:
+    	     print "is not prime number is %s" %(num)
+    	     break
+       else:
+             print "is prime number %s" %(num)
+             break
+else:
+	print "is not prime number "
+*********************************************************************************************
+'''17. Given two arrays, 1,2,3,4,5 and 2,3,1,0,5 find which number is not present in
+the second array.'''
+def ar():
+	c = filter( lambda x: (not(x in b)), a)
+	n.append(c)
+	return n
+def ar2():
+    d = filter( lambda y: (not(y in a)), b)	
+    n.append(d)
+    return n
+
+     
+
+n=[]	
+a=[1,2,3,4,5]
+b=[2,3,1,0,5]
+ar()
+ar2()
+print n
+*********************************************************************************************
+'''18. The sum of the squares of the first ten natural numbers is,
+12 + 22 + ... + 102 = 385
+The square of the sum of the first ten natural numbers is,
+(1 + 2 + ... + 10)2 = 552 = 3025'''
+global n
+def suq():
+    a=10
+    s=0
+    k=0
+    for i in range(0,a+1):
+         s=i+(s)
+         sq=s**2
+         k=(i**2)+(k)
+    global n     
+    n=sq-k
+    return n
+   
+   
+    
+
+print suq()
+
+
+***********************************************************************************************
+'''19. write a program ( in any programming language ) to Compute the area and perimeter of a 
+circle with radius 3 using function .[Given pi= 3.14, Area= pi*(r*r) , perimeter= 2*pi*r]'''
+
+def cir():
+    r=3
+    pi= 3.14
+    Area= pi*(r*r) 
+    perimeter= 2*pi*r
+    print "Area=%s" %(Area)
+    print "Perimeter=%s" %(perimeter)
+
+
+print cir()    
+*********************************************************************************************
+'''20. greeting = "Hello Google!" number of character in greeting stored in the variable 
+number_of_char and repeat the greetings based on the number of character in 'greeting'''
+
+
+
+greeting ="Hello Google!"
+b=len(greeting)
+s=greeting*b
+print s
+**********************************************************************************************
+"""21. Write a program that reads an integer N (1 < N < 1000). This N is the number of output lines 
+"""
+n=input("enter the no") #enter the no
+for x in range(1,n+1): #range upto n value
+    print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x)) #print with space
+*********************************************************************************************
+'''22. Write a function that validates the password. It should be 6-8 characters long. It consists of 
+alphanumeric characters with a mixture of digits and letters.'''
+import re#importing regular expressions
+p=raw_input("enter the password:")
+l=len(p)
+s1=re.search('[a-zAA-Z]',p)
+s2=re.search('[0-9]',p)
+if (6<=l<=8):
+    if s1 and s2:#checking in s1 and s2 if two tuple have values prints valid 
+        print "valid password"
+    else:
+	    print"type your password in alphanumeric"
+else:
+	print "password should be 6-8 characters"
+
+ *********************************************************************************************
+"""23. Read two numbers M and N indefinitely. Calculate and write the sum of their factorial. Be 
+carefull, because the result can have more than 15 digits."""
+num = input("Enter a first number: ")
+factorial=1
+if num==0:
+	 print("The factorial of 0 is 1")
+else:     
+	for i in range(1,num + 1):
+         factorial=factorial*i
+print("The factorial of",num,"is",factorial)
+
+
+num2= input("Enter a second number: ")
+factorial1=1
+if num2==0:
+     print("The factorial of 0 is 1")
+else:          
+     for j in range(1,num + 1):
+        factorial1 = factorial1*j
+     print("The factorial of",num2,"is",factorial1)
+
+
+sum=factorial+factorial1
+print sum
+*************************************************************************************	   

@@ -1,0 +1,266 @@
+1)# Program to add two matrices using nested loop
+
+X = [[12,7,3],
+    [4 ,5,6],
+    [7 ,8,9]]
+
+Y = [[5,8,1],
+    [6,7,3],
+    [4,5,9]]
+
+result = [[0,0,0],
+         [0,0,0],
+         [0,0,0]]
+
+# iterate through rows
+for i in range(len(X)):
+   # iterate through columns
+   for j in range(len(X[0])):
+       result[i][j] = X[i][j] + Y[i][j]
+
+for r in result:
+   print(r)
+   
+#Output
+[17, 15, 4]
+[10, 12, 9]
+[11, 13, 18]
+
+
+***************************************************************************************************************************
+Matrix Transpose using Nested List Comprehension
+# Program to add two matrices
+# using list comprehension
+
+X = [[12,7,3],
+    [4 ,5,6],
+    [7 ,8,9]]
+
+Y = [[5,8,1],
+    [6,7,3],
+    [4,5,9]]
+
+result = [[X[i][j] + Y[i][j]  for j in range(len(X[0]))] for i in range(len(X))]
+
+for r in result:
+   print(r)
+   
+#Output
+[17, 15, 4]
+[10, 12, 9]
+[11, 13, 18]
+
+************************************************************************************************************************
+
+2)# Program to transpose a matrix using nested loop
+
+X = [[12,7],
+    [4 ,5],
+    [3 ,8]]
+
+result = [[0,0,0],
+         [0,0,0]]
+
+# iterate through rows
+for i in range(len(X)):
+   # iterate through columns
+   for j in range(len(X[0])):
+       result[j][i] = X[i][j]
+
+for r in result:
+   print(r)
+
+
+#Output
+
+[12, 4, 3]
+[7, 5, 8]
+
+
+***************************************************************************************************************************
+Matrix Transpose using Nested List Comprehension
+# Program to transpose a matrix
+# using list comprehension
+
+X = [[12,7],
+    [4 ,5],
+    [3 ,8]]
+
+result = [[X[j][i] for j in range(len(X))] for i in range(len(X[0]))]
+
+for r in result:
+   print(r)
+   
+#Output
+
+[12, 4, 3]
+[7, 5, 8]
+
+**************************************************************************************************************************
+3)Matrix Transpose using Nested Loop
+
+
+# Program to transpose a matrix using nested loop
+
+X = [[12,7],
+    [4 ,5],
+    [3 ,8]]
+
+result = [[0,0,0],
+         [0,0,0]]
+
+# iterate through rows
+for i in range(len(X)):
+   # iterate through columns
+   for j in range(len(X[0])):
+       result[j][i] = X[i][j]
+
+for r in result:
+   print(r)
+
+#Output
+
+
+[12, 4, 3]
+[7, 5, 8]
+ 
+*************************************************************************************************************************
+Matrix Transpose using Nested List Comprehension
+Source Code
+
+# Program to transpose a matrix
+# using list comprehension
+
+X = [[12,7],
+    [4 ,5],
+    [3 ,8]]
+
+result = [[X[j][i] for j in range(len(X))] for i in range(len(X[0]))]
+
+for r in result:
+   print(r)
+   
+***************************************************************************************************************************
+
+4)# Program to count the number of each vowel in a string
+
+# string of vowels
+vowels = 'aeiou'
+
+# take input from the user
+ip_str = input("Enter a string: ")
+
+# make it suitable for caseless comparisions
+ip_str = ip_str.casefold()
+
+# make a dictionary with each vowel a key and value 0
+count = {}.fromkeys(vowels,0)
+
+# count the vowels
+for char in ip_str:
+   if char in count:
+       count[char] += 1
+
+print(count)
+
+#Output
+
+Enter a string: Hello, have you tried our turorial section yet?
+{'e': 5, 'u': 3, 'o': 5, 'a': 2, 'i': 3}
+
+***************************************************************************************************************************
+
+# Program to count the number of
+# each vowel in a string using
+# dictionary and list comprehension
+
+# take input from the user
+ip_str = input("Enter a string: ")
+
+# make it suitable for caseless comparisions
+ip_str = ip_str.casefold()
+
+# count the vowels
+count = {x:sum([1 for char in ip_str if char == x]) for x in 'aeiou'}
+
+print(count)
+
+**************************************************************************************************************************
+5)# Program to all punctuation from the string provided by the user
+
+# define punctuation
+punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+
+# take input from the user
+my_str = input("Enter a string: ")
+
+# remove punctuation from the string
+no_punct = ""
+for char in my_str:
+   if char not in punctuations:
+       no_punct = no_punct + char
+
+# display the unpunctuated string
+print(no_punct)
+
+#Output
+
+
+Enter a string: "Hello!!!", he said ---and went.
+Hello he said and went
+
+***************************************************************************************************************************
+
+6)# Program to sort alphabetically the words form a string provided by the user
+
+# take input from the user
+my_str = input("Enter a string: ")
+
+# breakdown the string into a list of words
+words = my_str.split()
+
+# sort the list
+words.sort()
+
+# display the sorted words
+for word in words:
+   print(word)  
+Output
+
+
+Enter a string: Hello this Is an Example With cased letters
+Example
+Hello
+Is
+With
+an
+cased
+letters
+this
+
+**************************************************************************************************************************
+
+7)# Program to check if a string
+#  is palindrome or not
+
+# take input from the user
+my_str = input("Enter a string: ")
+
+# make it suitable for caseless comparison
+my_str = my_str.casefold()
+
+# reverse the string
+rev_str = reversed(my_str)
+
+# check if the string is equal to its reverse
+if list(my_str) == list(rev_str):
+   print("It is palindrome")
+else:
+   print("It is not palindrome")
+Output 1
+
+
+Enter a string: aIbohPhoBiA
+It is palindrome
+
+***************************************************************************************************************************

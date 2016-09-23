@@ -1,0 +1,172 @@
+Assignments
+Class Assignments
+Introduction
+Objectives
+Getting Started
+What Is Computer Science?
+What Is Programming?
+Why Study Data Structures and Abstract Data Types?
+Why Study Algorithms?
+Review of Basic Python
+Getting Started with Data
+Built-in Atomic Data Types
+Built-in Collection Data Types
+Input and Output
+String Formatting
+Control Structures
+Exception Handling
+Defining Functions
+Object-Oriented Programming in Python: Defining Classes
+A Fraction Class
+Inheritance: Logic Gates and Circuits
+Summary
+Key Terms
+Discussion Questions
+Programming Exercises
+Analysis
+Objectives
+What Is Algorithm Analysis?
+Big-O Notation
+An Anagram Detection Example
+Solution 1: Checking Off
+Solution 2: Sort and Compare
+Solution 3: Brute Force
+Solution 4: Count and Compare
+Performance of Python Data Structures
+Lists
+Dictionaries
+Summary
+Key Terms
+Discussion Questions
+Programming Exercises
+Basic Data Structures
+Objectives
+What Are Linear Structures?
+What is a Stack?
+The Stack Abstract Data Type
+Implementing a Stack in Python
+Simple Balanced Parentheses
+Balanced Symbols (A General Case)
+Converting Decimal Numbers to Binary Numbers
+Infix, Prefix and Postfix Expressions
+Conversion of Infix Expressions to Prefix and Postfix
+General Infix-to-Postfix Conversion
+Postfix Evaluation
+What Is a Queue?
+The Queue Abstract Data Type
+Implementing a Queue in Python
+Simulation: Hot Potato
+Simulation: Printing Tasks
+Main Simulation Steps
+Python Implementation
+Discussion
+What Is a Deque?
+The Deque Abstract Data Type
+Implementing a Deque in Python
+Palindrome-Checker
+Lists
+The Unordered List Abstract Data Type
+Implementing an Unordered List: Linked Lists
+The Node Class
+The Unordered List Class
+The Ordered List Abstract Data Type
+Implementing an Ordered List
+Analysis of Linked Lists
+Summary
+Key Terms
+Discussion Questions
+Programming Exercises
+Recursion
+Objectives
+What Is Recursion?
+Calculating the Sum of a List of Numbers
+The Three Laws of Recursion
+Converting an Integer to a String in Any Base
+Stack Frames: Implementing Recursion
+Introduction: Visualizing Recursion
+Sierpinski Triangle
+Complex Recursive Problems
+Tower of Hanoi
+Exploring a Maze
+Dynamic Programming
+Summary
+Key Terms
+Discussion Questions
+Glossary
+Programming Exercises
+Sorting and Searching
+Objectives
+Searching
+The Sequential Search
+Analysis of Sequential Search
+The Binary Search
+Analysis of Binary Search
+Hashing
+Hash Functions
+Collision Resolution
+Implementing the Map Abstract Data Type
+Analysis of Hashing
+Sorting
+The Bubble Sort
+The Selection Sort
+The Insertion Sort
+The Shell Sort
+The Merge Sort
+The Quick Sort
+Summary
+Key Terms
+Discussion Questions
+Programming Exercises
+Trees and Tree Algorithms
+Objectives
+Examples of Trees
+Vocabulary and Definitions
+List of Lists Representation
+Nodes and References
+Parse Tree
+Tree Traversals
+Priority Queues with Binary Heaps
+Binary Heap Operations
+Binary Heap Implementation
+The Structure Property
+The Heap Order Property
+Heap Operations
+Binary Search Trees
+Search Tree Operations
+Search Tree Implementation
+Search Tree Analysis
+Balanced Binary Search Trees
+AVL Tree Performance
+AVL Tree Implementation
+Summary of Map ADT Implementations
+Summary
+Key Terms
+Discussion Questions
+Programming Exercises
+Graphs and Graph Algorithms
+Objectives
+Vocabulary and Definitions
+The Graph Abstract Data Type
+An Adjacency Matrix
+An Adjacency List
+Implementation
+The Word Ladder Problem
+Building the Word Ladder Graph
+Implementing Breadth First Search
+Breadth First Search Analysis
+The Knight’s Tour Problem
+Building the Knight’s Tour Graph
+Implementing Knight’s Tour
+Knight’s Tour Analysis
+General Depth First Search
+Depth First Search Analysis
+Topological Sorting
+Strongly Connected Components
+Shortest Path Problems
+Dijkstra’s Algorithm
+Analysis of Dijkstra’s Algorithm
+Prim’s Spanning Tree Algorithm
+Summary
+Key Terms
+Discussion Questions
+Programming Exercises

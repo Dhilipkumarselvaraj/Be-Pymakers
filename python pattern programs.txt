@@ -1,0 +1,333 @@
+n = input("Enter the height:")#getting the value from the user for pattern height
+n = int(n)#converting to integer format
+for i in range(1,n+1):#for loop for height in row wise
+	for j in range(1,n+1):#for loop for width in column wise
+		print("*",end = " ")
+	print("\n")
+"""Enter the height:5
+* * * * * 
+
+* * * * * 
+
+* * * * * 
+
+* * * * * 
+
+* * * * * 
+"""
+--------------------------------------------------------------------------------------------------------------------------
+n = input("Enter the height:")
+n = int(n)
+for i in range(1,n+1):
+	for j in range(1,n):
+		print(i,end = " ")
+	print("\n")
+
+"""Enter the height:5
+1 1 1 1 
+
+2 2 2 2 
+
+3 3 3 3 
+
+4 4 4 4 
+
+5 5 5 5 
+"""
+-------------------------------------------------------------------------------------------------------------------------
+n = input("Enter the height:")
+n = int(n)
+for i in range(1,n+1):
+	for j in range(1,n+1):
+		print(j,end = " ")
+	print("\n")
+"""Enter the height:5
+1 2 3 4 5
+
+1 2 3 4 5
+
+1 2 3 4 5
+
+1 2 3 4 5
+
+1 2 3 4 5
+
+"""
+------------------------------------------------------------------------------------------------------------------------
+n = input("Enter the string:")
+
+for i in n:
+	for j in n:
+		print(j,end = " ")
+	print ("\n")
+"""Enter the string:dhilip
+d h i l i p 
+
+d h i l i p 
+
+d h i l i p 
+
+d h i l i p 
+
+d h i l i p 
+
+d h i l i p 
+
+""""
+------------------------------------------------------------------------------------------------------------------------
+n = input("Enter the string:")
+
+for i in n:
+	for j in n:
+		print(i,end = " ")
+	print ("\n")
+"""Enter the string:dhilip
+d d d d d d 
+
+h h h h h h 
+
+i i i i i i 
+
+l l l l l l 
+
+i i i i i i 
+
+p p p p p p """
+
+-------------------------------------------------------------------------------------------------------------------------
+n = input("Enter the height:")
+n = int(n)
+for i in range(1,n+1):
+	for j in range((n+1)-i):
+		print(i,end = " ")
+	print("\n")
+
+"""Enter the height:6
+1 1 1 1 1 1 
+
+2 2 2 2 2 
+
+3 3 3 3 
+
+4 4 4 
+
+5 5 
+
+6 
+"""
+---------------------------------------------------------------------------------------------------------------------
+n = input("Enter the height:")
+n = int(n)
+for i in range(1,n+1):
+	for j in range((n+1)-i,0,-1):
+		print(i,end = " ")
+	print("\n")
+
+"""Enter the height:6
+6 5 4 3 2 1 
+
+5 4 3 2 1 
+
+4 3 2 1 
+
+3 2 1 
+
+2 1 
+
+1 
+
+"""
+-------------------------------------------------------------------------------------------------------------------
+n = input("Enter the height:")
+n = int(n)
+for i in range(1,n+1):
+	for j in range((n+1)-i,0,-1):
+		print(" ",end = " ")
+	for k in range(0,i,1):
+		print (i,end = " ")
+	print("\n")
+"""Enter the height:5
+          1 
+
+        2 2 
+
+      3 3 3 
+
+    4 4 4 4 
+
+  5 5 5 5 5 
+
+"""
+----------------------------------------------------------------------------------------------------------------
+n = input("Enter the height:")
+n = int(n)
+for i in range(1,n+1):
+	for k in range(0,i,1):
+		print (" ",end = " ")
+	for j in range((n+1)-i,0,-1):
+		print(i,end = " ")
+	
+	print("\n")
+"""Enter the height:5
+  1 1 1 1 1 
+
+    2 2 2 2 
+
+      3 3 3 
+
+        4 4 
+
+          5 
+"""
+---------------------------------------------------------------------------------------------------------------
+n = input("enter the string:")
+length = len(n)
+
+for i in range(0,length):
+	for j in range(0,length):
+		if(i==j or i+j==length-1):
+			print (n[i],end =" ")
+		else:
+			print (end = " ")
+	print ("\n")
+"""
+enter the string:dhili
+d    d 
+
+ h  h  
+
+  i   
+
+ l  l  
+
+i    i 
+"""
+----------------------------------------------------------------------------------------------------------
+n = input("enter the string:")
+length = len(n)
+
+for i in range(0,length):
+	for j in range(0,length):
+		if(i==j or i+j==length-1):
+			print (n[j],end =" ")
+		else:
+			print (end = " ")
+	print ("\n")
+""" 
+enter the string:dhili
+d    i 
+
+ h  l  
+
+  i   
+
+ h  l  
+
+d    i 
+
+"""
+------------------------------------------------------------------------------------------------------------
+n = input("enter the value:")
+length = int(n)
+
+for i in range(0,length):
+	for j in range(0,length):
+		if(i==j or i+j==length-1):
+			print (chr(j+65),end =" ")
+		else:
+			print (end = " ")
+	print ("\n")
+"""
+enter the string:5
+A    E 
+
+ B  D  
+
+  C   
+
+ B  D  
+
+A    E 
+"""
+----------------------------------------------------------------------------------------------------------
+n = input("enter the value:")
+length = int(n)
+
+for i in range(0,length):
+	for j in range(0,length):
+		if(i==j or i+j==length-1):
+			print (chr(i+65),end =" ")
+		else:
+			print (end = " ")
+	print ("\n")
+"""enter the value:5
+A    A 
+
+ B  B  
+
+  C   
+
+ D  D  
+
+E    E 
+"""
+-------------------------------------------------------------------------------------------------
+value = input("enter the string:")
+
+n = len(value)
+
+k = 1
+for i in range(0,n):
+    for j in range(0,i):
+        print (" ",end =" ")
+    print(value[i],end = " ")
+
+    for j in range(k,(n-1)*2):
+        print(" ",end = " ")
+
+    if(i<n-1):
+        print(value[i],end = " ")
+    k += 2
+    print("\n")
+"""enter the string:dhilip
+d                   d 
+
+  h               h 
+
+    i           i 
+
+      l       l 
+
+        i   i 
+
+          p 
+"""
+----------------------------------------------------------------------------------------------------------------
+n = input("enter the value for height:")
+n = int(n)
+k = 1
+for i in range(0,n):
+    for j in range(0,i):
+        print (" ",end =" ")
+    print(chr(i+65),end = " ")
+
+    for j in range(k,(n-1)*2):
+        print(" ",end = " ")
+
+    if(i<n-1):
+        print(chr(i+65),end = " ")
+    k += 2
+    print("\n")
+"""enter the value for height:5
+A               A 
+
+  B           B 
+
+    C       C 
+
+      D   D 
+
+        E 
+"""
+------------------------------------------------------------------------------------------------------------------
+

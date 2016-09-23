@@ -1,0 +1,83 @@
+import inflect
+value =  input("enter the value :")
+p = inflect.engine()
+k = p.number_to_words(value)
+print k
+------------------------------------------------
+value1 =  [x for x in (raw_input().split(","))]
+l1 = []
+for i in value1:
+	l1.append(i)
+print l1
+value2 = [y for y in (raw_input().split(","))]
+l2 = []
+for j in value2:
+	l2.append(j)
+print l2
+for item in l2:
+    if item not in l1:
+        print item
+------------------------------------------------
+
+A = []
+B = []
+item1 = [x for x in (raw_input().split(","))]
+item2 = [x for x in (raw_input().split(","))]
+for i in item1:
+    A.append(i)
+for j in item2:
+    B.append(j)
+
+
+result = [None]*(len(A)+len(B))
+result[::2] = A
+result[1::2] = B
+print result
+---------------------------------------------
+import sys
+password = raw_input("enter the password:")
+length = len(password)
+if password.isalnum():
+	if (6<length<8):
+		print "password strength correct"
+	else:
+		print "enter password of length 6 to 7"
+		sys.exit()
+else:
+	print"enter password in alphanumeric "
+	sys.exit()
+
+password2 = raw_input("enter the password to re-check:")
+if password2 == password:
+	print "valid password"
+else :
+	print "wrong password enter correct password"
+	sys.exit()
+---------------------------------------------------
+l = []
+value  =  input("enter the starting value :")
+value2 =  input("enter the ending value :")
+
+for i in range(value,value2,1):
+	 if((i%7 == 0) and (i%5 != 0)):
+			l.append(i)
+print l
+----------------------------------------------------
+import heapq
+
+el = []
+value1 = [x for x in (raw_input().split(","))]
+for i in value1:
+	el.append(int(i))
+
+es = sorted(el)
+print es
+lrnum = input("enter the place of highest value")
+value = heapq.nlargest(lrnum, el)
+print value
+l = len(value)
+
+rslt = l -1
+result = value[rslt]
+print result
+-----------------------------------------------------------
