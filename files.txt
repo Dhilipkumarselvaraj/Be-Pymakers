@@ -1,0 +1,38 @@
+file = open("/home/dhilip/workspace/wrk/strings/file.txt") #open the file by giving its location
+line = file.read()#using read() reading the file
+
+
+#to know number of words in a file
+print "total number of words in a file :%d"%(len(line))
+
+
+
+#to count the freq of word in a file
+mydict = {}
+for word in line.split():#splitting the line and taking the words
+	mydict[word]=mydict.get(word,0)+1
+word = mydict.keys()#getting the key-value by using key() 
+
+for w in word:
+	if mydict[w]>1:
+		print "%s:%d"%(w,mydict[w])
+
+
+----------------------------------------------------------------------------------------------------------------
+import io
+file = open("/home/dhilip/workspace/wrk/strings/file.txt")
+line = file.readlines()
+length=len(line)#for counting the lines in the file
+print length
+----------------------------------------------------------------------------------------------------------------
+import io
+
+with io.FileIO("outpt.txt","w") as f:#creating the file output.txt and using the command as short using variable f
+
+    line_no = input("enter the line number you want : ")
+
+    file = open("/home/dhilip/workspace/wrk/strings/file.txt")
+    for i,line in enumerate(file):
+        if i == line_no:
+             f.write(line)
+---------------------------------------------------------------------------------------------------------------------
