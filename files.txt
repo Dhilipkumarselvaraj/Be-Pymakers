@@ -35,4 +35,7 @@ with io.FileIO("outpt.txt","w") as f:#creating the file output.txt and using the
     for i,line in enumerate(file):
         if i == line_no:
              f.write(line)
+****another*method*******
+line=readlines()
+print line[line_no]
 ---------------------------------------------------------------------------------------------------------------------
