@@ -330,4 +330,48 @@ A               A
         E 
 """
 ------------------------------------------------------------------------------------------------------------------
+n=int(input("enter the height:"))
+for a in range(1,n+1):
+	for b in range((n+1)-a,0,-1):
+		print("*",end=" ")
+	for c in range(1,a,1):
+		print(" ",end=" ")
+	for k in range(1,a,1):
+		print(" ",end=" ")
+	for  j in range((n+1)-a,0,-1):
+		print("*",end=" ")
+	print("\n")
+for i in range(1,n+1):
+	for q in range(1,i+1,1):
+		print("*",end=" ")
+	for r in range((n+1)-i,1,-1):
+		print(" ",end=" ")
+	for s in range((n+1)-i,1,-1):
+		print(" ",end=" ")
+	for p in range(1,i+1,1):
+		print("*",end=" ")
+	print("\n")
+#output:
+"""
+enter the height:5
+* * * * * * * * * * 
+
+* * * *     * * * * 
+
+* * *         * * * 
+
+* *             * * 
+
+*                 * 
+
+*                 * 
+
+* *             * * 
+
+* * *         * * * 
+
+* * * *     * * * * 
+
+* * * * * * * * * * 
+"""
 
