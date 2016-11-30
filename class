@@ -1,0 +1,21 @@
+simple class:
+class Vehicle:
+    def __init__(self,v_type,company,name):
+        self.type=v_type
+        self.company=company
+        self.name=name
+    def detail(self):
+         return 'type of Vehicle = {} \ncompany = {} \nname = {}' .format(self.type,self.company,self.name)
+v1=Vehicle("car","renault","duster")
+print v1.detail()
+v2=Vehicle("lorry","eicher","402")
+print v2.detail()
+
+#output
+"""type of Vehicle = car 
+company = renault 
+name = duster
+type of Vehicle = lorry 
+company = eicher 
+name = 402
+"""
