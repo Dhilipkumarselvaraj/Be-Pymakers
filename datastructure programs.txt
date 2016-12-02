@@ -452,3 +452,91 @@ if __name__ == "__main__":
     print "Player1", "won" if t3.win(player1) else "lost"
     print "Player2", "won" if t3.win(player2) else "lost"
 --------------------------------------------------------------------------------------------------------------------
+def fibo(max):
+	a,b=0,1
+	for i in range(0,max):
+		yield a
+		a,b = b,a+b
+if __name__=="__main__":
+	for i in fibo(10):
+		print i
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+dimension=[int(x) for x in raw_input("enter the dimension value:").split(",") ]
+colnum=dimension[0] 
+rownum=dimension[1]
+matrix1=[[(input("enter the value matrix1:")) for col in range(colnum)]for row in range(rownum)]
+matrix2=[[(input("enter the value matrix2:")) for col2 in range(colnum)]for row2 in range(rownum)]
+result=[[0 for col2 in range(colnum)]for row2 in range(rownum)]
+for i in range(len(matrix1)):
+	for j in range(len(matrix1[0])):
+		result[i][j]=matrix1[i][j]*matrix2[i][j]
+print result
+-------------------------------------------------------------------------------------------------------------------------
+lower =1
+upper = 10
+
+# uncomment the following lines to take input from the user
+#lower = int(input("Enter lower range: "))
+#upper = int(input("Enter upper range: "))
+
+for num in range(lower,upper + 1):
+   # prime numbers are greater than 1
+   if num > 1:
+       for i in range(2,num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
+------------------------------------------------------------------------------------------------------------
+def factorial(num):
+	if num == 1:
+		return num
+	else:
+		return (num*factorial(num-1))
+num=8
+print factorial(num)
+----------------------------------------------------------------------------------------------------------------
+class Mario:
+	def mario(self):
+		print ("i m moving")
+class shroom:
+	def eat_shroom(self):
+		print("i m eating mushroom")
+class Bigmario(Mario,shroom):
+	pass
+bm = Bigmario()
+bm.mario()
+bm.eat_shroom()
+-----------------------------------------------------------------------------------
+class Vehicle:
+    def __init__(self,v_type,company,name):
+        self.type=v_type
+        self.company=company
+        self.name=name
+    def detail(self):
+         return 'type of Vehicle = {} \ncompany = {} \nname = {}' .format(self.type,self.company,self.name)
+class Motor:
+	def det(self):
+		print 'i m n Motor det'
+class Heavy(Vehicle,Motor):
+	def heavy(self):
+		print 'i m n heavy...'
+v1=Heavy("car","renault","duster")
+print v1.detail()
+v2=Heavy("lorry","eicher","402")
+print v2.detail()
+print v1.det()
+print v2.heavy()
+----------------------------------------------------------------------------------------------------------------
+def greet(*names):
+   """This function greets all
+   the person in the names tuple."""
+
+   # names is a tuple with arguments
+   for name in names:
+       print("Hello",name)
+
+greet("Monica","Luke","Steve","John")
+-------------------------------------------------------------------
